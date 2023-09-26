@@ -9,7 +9,7 @@ const Navbar = () => {
   let Links = [
     { name: "HOME", link: "/" },
     { name: "FOUND", link: "/found-items" },
-    { name: "LOST", link: "lost-items" },
+    { name: "LOST", link: "/lost-items" },
     { name: "REPORT", link: "/report-item" },
   ];
   let [open, setOpen] = useState(false);

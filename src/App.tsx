@@ -23,7 +23,6 @@ function App() {
       path: "/report-item",
       element: <ReportItem />,
     },
-
   ]);
   return (
     <div className="App">
