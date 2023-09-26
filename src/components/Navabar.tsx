@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
+import { NavLink } from "react-router-dom";
 import "../assets/home.css";
 import { RxHamburgerMenu as Burger } from "react-icons/rx";
 import { AiOutlineClose as Close } from "react-icons/ai";
@@ -7,10 +8,9 @@ import { AiOutlineClose as Close } from "react-icons/ai";
 const Navbar = () => {
   let Links = [
     { name: "HOME", link: "/" },
-    { name: "SERVICE", link: "/" },
-    { name: "ABOUT", link: "/" },
-    { name: "BLOG'S", link: "/" },
-    { name: "CONTACT", link: "/" },
+    { name: "FOUND", link: "/found-items" },
+    { name: "LOST", link: "lost-items" },
+    { name: "REPORT", link: "/report-item" },
   ];
   let [open, setOpen] = useState(false);
   return (
@@ -40,12 +40,12 @@ const Navbar = () => {
         >
           {Links.map((link) => (
             <li key={link.name} className="text-xl md:ml-8 md:my-0 my-7">
-              <a
-                href={link.link}
+              <NavLink
+                to={link.link}
                 className="text-gray-800 duration-500 hover:text-gray-400"
               >
                 {link.name}
-              </a>
+              </NavLink>
             </li>
           ))}
           <Button>Get Started</Button>
