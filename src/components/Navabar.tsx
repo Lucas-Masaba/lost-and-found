@@ -23,7 +23,7 @@ const Navbar = () => {
           <span className="pt-2 mr-1 text-3xl text-indigo-600">
             {/* <ion-icon name="logo-ionic"></ion-icon> */}
           </span>
-          Designer
+          FindIt
         </div>
 
         <div
@@ -42,7 +42,14 @@ const Navbar = () => {
             <li key={link.name} className="text-xl md:ml-8 md:my-0 my-7">
               <NavLink
                 to={link.link}
-                className="text-gray-800 duration-500 hover:text-gray-400"
+                className={({ isActive, isPending }) =>
+                  isPending
+                    ? "pending"
+                    : isActive
+                    ? "rounded-sm bg-slate-300 px-2 py-1"
+                    : "px-2 py-1"
+                }
+                // className="text-gray-800 duration-500 hover:text-gray-400"
               >
                 {link.name}
               </NavLink>
