@@ -6,13 +6,13 @@ import { RxHamburgerMenu as Burger } from "react-icons/rx";
 import { AiOutlineClose as Close } from "react-icons/ai";
 
 const Navbar = () => {
-  let Links = [
+  const Links = [
     { name: "HOME", link: "/" },
     { name: "FOUND", link: "/found-items" },
     { name: "LOST", link: "/lost-items" },
     { name: "REPORT", link: "/report-item" },
   ];
-  let [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <div className="fixed top-0 left-0 w-full shadow-md">
       <div className="items-center justify-between py-4 bg-white md:flex md:px-10 px-7">
